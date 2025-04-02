@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     currentYear.textContent = new Date().getFullYear();
 
     const reviews = [
-        { text: "SkillBridge helped me land a job in 3 months!", name: "Alex R.", role: "Software Engineer", image: "images/mic.jpg" },
-        { text: "Upskilled in SQL and got hired fast!", name: "Maria S.", role: "Data Analyst", image: "images/R.jpg" },
-        { text: "Learned a lot about tech, became a full stack developer!", name: "James T.", role: "Full Stack Developer", image: "images/ying.jpg" },
-        { text: "Switched careers with confidence!", name: "Travis T.", role: "Web Developer", image: "images/ray.jpg" },
-        { text: "Had fun throughout the whole journey", name: "Macine T.", role: "Web Developer", image: "images/ian.jpg" }
+        { text: "SkillBridge helped me land a job in 3 months!", name: "Alex R.", role: "Software Engineer", image: "./public/images/mic.jpg" },
+        { text: "Upskilled in SQL and got hired fast!", name: "Maria S.", role: "Data Analyst", image: "./public/images/R.jpg" },
+        { text: "Learned a lot about tech, became a full stack developer!", name: "James T.", role: "Full Stack Developer", image: "./public/images/ying.jpg" },
+        { text: "Switched careers with confidence!", name: "Travis T.", role: "Web Developer", image: "./public/images/ray.jpg" },
+        { text: "Had fun throughout the whole journey", name: "Macine T.", role: "Web Developer", image: "./public/images/ian.jpg" }
     ];
 
     let currentIndex = 0;
@@ -51,13 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
         reviewCarousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 
         // Seamless loop: reset to start when reaching the duplicated cards
-        if (currentIndex >= totalCards) {
+        /*if (currentIndex >= totalCards) {
             setTimeout(() => {
                 reviewCarousel.style.transition = "none";
                 currentIndex = 0;
                 reviewCarousel.style.transform = `translateX(0px)`;
             }, 500); // Match transition duration
-        }
+        }*/
     }
 
     function startAutoSlide() {
